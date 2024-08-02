@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitura de Arquivos XML</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Leitura de Arquivos XML</h1>
+        <!-- Input para selecionar arquivos -->
+        <div class="form-group">
+            <input type="file" id="fileInput" class="form-control-file" multiple>
+        </div>
+        <!-- Botão para processar os arquivos selecionados -->
+        <button onclick="processFiles()" class="btn btn-primary btn-block">Processar Arquivos</button>
+        <!-- Div para exibir os resultados -->
+        <div id="output" class="mt-4">
+            <div id="pesoTotalNotas" class="alert alert-info d-none">
+                <strong>Peso Total das Notas em KG:</strong> <span id="pesoTotalNotasValor"></span>
+            </div>
+            <div id="valorTotalNotas" class="alert alert-info d-none">
+                <strong>Valor Total das Notas em R$:</strong> <span id="valorTotalNotasValor"></span>
+            </div>
+        </div>
+        <!-- Div para exibir as chaves das notas fiscais -->
+        <div id="chavesNotas" class="mt-4">
+            <h4>Chaves das Notas Fiscais:</h4>
+            <ul id="listaChaves" class="list-group"></ul>
+        </div>
+        <!-- Div para exibir mensagens de feedback -->
+        <div id="feedback" class="mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

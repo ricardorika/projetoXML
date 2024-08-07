@@ -14,7 +14,7 @@ function processFiles() {
 
     let totals = {
         pesoB: 0,
-        vPag: 0
+        vNF: 0
     };
 
     let filesProcessed = 0; // Contador para rastrear arquivos processados
@@ -40,7 +40,7 @@ function processFiles() {
 
 // Função para atualizar os totais com base no conteúdo XML
 function updateTotals(xmlDoc, totals) {
-    ['pesoB', 'vPag'].forEach(field => {
+    ['pesoB', 'vNF'].forEach(field => {
         const elements = xmlDoc.getElementsByTagName(field);
         for (let i = 0; i < elements.length; i++) {
             const value = parseFloat(elements[i].textContent);
@@ -73,7 +73,7 @@ function displayTotals(totals) {
 
     // Atualiza os valores exibidos
     pesoTotalNotasValor.textContent = formatNumber(totals['pesoB']);
-    valorTotalNotasValor.textContent = formatNumber(totals['vPag']);
+    valorTotalNotasValor.textContent = formatNumber(totals['vNF']);
 
     // Exibe as divs que estavam escondidas
     pesoTotalNotasDiv.classList.remove('d-none');
